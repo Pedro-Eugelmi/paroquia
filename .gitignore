@@ -1,6 +1,5 @@
 node_modules/
 npm-debug.log
 yarn-error.log
- gulpfile.js
 package-lock.json
 package.json

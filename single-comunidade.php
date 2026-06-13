@@ -48,7 +48,7 @@
 
                                             <div class="time-card-list-time">
                                                 <?php echo wpautop($item["horarios"]) ?>
-                                            </div
+                                            </div>
                                         </li>    
                                     <?php endforeach;?>
                                     
@@ -148,10 +148,10 @@
                         </div>
                     </div>
 
-                    <div class="swiper-button-next">
+                    <div class="swiper-button-next swiper-button-gallery-next">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="#D9D9D9"/><path d="M12 21L18 15L12 9" stroke="#FF0004"/></svg>
                     </div>
-                    <div class="swiper-button-prev">
+                    <div class="swiper-button-prev swiper-button-gallery-prev">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15" fill="#D9D9D9"/><path d="M18 9L12 15L18 21" stroke="#FF0004"/></svg>
                     </div>
                 </div>

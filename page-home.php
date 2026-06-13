@@ -50,8 +50,8 @@
         $args = array(
             'post_type' => 'galeria-de-foto',
             'posts_per_page' => 6,
-            'order' => 'DESC',
-            'orderby' => 'date'
+            'order' => 'menu_order',
+            'orderby' => 'ASC'
         );
         $the_query = new WP_Query($args);
     ?>
@@ -103,9 +103,10 @@
         $args = array(
             'post_type' => 'post',
             'posts_per_page' => 6,
-            'order' => 'DESC',
-            'orderby' => 'date'
+            'order' => 'menu_order',
+            'orderby' => 'ASC'
         );
+
         $the_query_articles = new WP_Query($args);
     ?>
 

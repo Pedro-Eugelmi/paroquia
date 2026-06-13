@@ -84,8 +84,18 @@ function wordpress_pagination($wp_query) {
 
 // Calculate the reading time
 function sc_get_reading_time($content) {
+    // Count words
     $words = str_word_count($content);
-    return ceil($words/200)." minutos";
+    
+    // Calculate reading time (assuming 200 words per minute)
+    $reading_time = ceil($words / 200);
+    // Ensure at least 1 minute
+
+    $reading_time = max(1, $reading_time);
+    // Return the text with correct pluralization
+    $reading_text = $reading_time > 1 ? "minutos" : "minuto";
+    
+    return "$reading_time $reading_text";
 }
 
 // Limpa o telefone
