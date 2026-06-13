@@ -2,6 +2,13 @@
 
 Este é o tema personalizado do WordPress desenvolvido sob medida para o portal da Paróquia Santa Clara de Assis (Birigui/SP). O projeto utiliza uma estrutura híbrida focada em performance, estilizada com **Sass (SCSS)** e otimizada via **Gulp**, rodando sobre o **Classic Editor (TinyMCE)** para facilitar o gerenciamento de conteúdo interno.
 
+## 🌐 Link de Produção & Propósito do Repositório
+
+* **Website Oficial:** [https://santaclarabirigui.com](https://santaclarabirigui.com)
+* **Propósito:** Este repositório está hospedado no GitHub **exclusivamente para fins de portfólio e divulgação de desenvolvimento**. 
+
+💡 Nota de Uso: > Este repositório está público para fins de portfólio e demonstração técnica. Sinta-se à vontade para utilizar a estrutura do Gulp, a organização do Sass ou os blocos de código como referência de estudo e inspiração para os seus próprios projetos. Apenas solicita-se que não seja feita a replicação integral e idêntica deste tema para uso comercial.
+
 ## 🛠️ Tecnologias e Dependências
 
 ### Front-end & Ferramentas
@@ -39,10 +46,3 @@ SANTA_CLARA/ (Raiz do Tema)
 ├── single-galeria-de-foto.php # Template para o Custom Post Type de Galerias de Fotos
 ├── single.php              # Template para posts individuais (Artigos/Notícias)
 └── style.css               # Folha de estilo principal obrigatória do WordPress
-
-## 🌐 Link de Produção & Propósito do Repositório
-
-* **Website Oficial:** [https://santaclarabirigui.com](https://santaclarabirigui.com)
-* **Propósito:** Este repositório está hospedado no GitHub **exclusivamente para fins de portfólio e divulgação de desenvolvimento**. 
-
-💡 Nota de Uso: > Este repositório está público para fins de portfólio e demonstração técnica. Sinta-se à vontade para utilizar a estrutura do Gulp, a organização do Sass ou os blocos de código como referência de estudo e inspiração para os seus próprios projetos. Apenas solicita-se que não seja feita a replicação integral e idêntica deste tema para uso comercial.
