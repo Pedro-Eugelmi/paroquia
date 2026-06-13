@@ -1,0 +1,212 @@
+// 1. Variáveis e Mixins
+$white: #ffffff;
+$main: #B22222;
+$gray: #F0F0F0;
+$dark-gray: #7e7c7c;
+$text-main: #000000;
+$text-body: #3a3939;
+$brown: #8B4513;
+
+@mixin main-font {
+    font-family: "Aleo", serif;
+}
+
+// 2. O Container Mãe (Front-end) + Seletor do Classic Editor (Admin)
+.editor, body#tinymce {
+    margin: 0 auto;
+    @include main-font;
+    line-height: 1.6;
+    color: $text-body;
+    box-sizing: border-box;
+
+    // Ajuste específico de largura apenas para a janela do editor no admin
+    &.mce-content-body {
+        max-width: 700px;
+        padding: 20px;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    strong {
+        font-weight: 600;
+        color: $text-main;
+    }
+
+    p {
+        font-size:16px;
+        font-weight: 400;
+    }
+
+    p + p {
+        margin-top: 20px;
+    }
+
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        border-radius: 10px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    // Headings
+    .wp-block-heading,
+    h1, h2, h3, h4, h5, h6 {
+        margin: 40px 0 20px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: $text-main;
+    }
+
+    h1 {
+        font-size: 48px;
+        font-weight: 300;
+        margin-top: 0;
+    }
+
+    h2 {
+        font-size: 32px;
+        color: $main;
+    }
+
+    h3 { font-size: 28px; }
+    h4 { font-size: 24px; }
+
+    @media (max-width: 720px) {
+        h1 { font-size: 32px; }
+        h2 { font-size: 26px; }
+    }
+
+    // Text Alignments
+    .has-text-align-left { text-align: left; }
+    .has-text-align-center { text-align: center; }
+    .has-text-align-right { text-align: right; }
+    .has-text-align-justify { text-align: justify; }
+
+    // Lists
+    .wp-block-list,
+    ul,
+    ol {
+        margin: 20px 0 20px 32px;
+        padding: 0;
+
+        li {
+            margin-bottom: 8px;
+            display: list-item;
+        }
+    }
+
+    ul li { list-style: disc; }
+    ol li { list-style: decimal; }
+
+    // Buttons
+    .wp-block-buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin: 24px 0;
+
+        &.aligncenter {
+            justify-content: center;
+        }
+    }
+
+    .wp-block-button__link {
+        @include main-font;
+        border: 1px solid $main;
+        background-color: transparent;
+        padding: 10px 20px;
+        color: $text-main;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: 0.3s;
+        display: inline-block;
+
+        &:hover {
+            background-color: $main;
+            color: $white;
+        }
+    }
+
+    // Quote
+    .wp-block-quote,
+    blockquote {
+        border-left: 4px solid $main;
+        padding: 20px 24px;
+        font-style: italic;
+        background: $gray;
+        margin: 32px 0;
+        border-radius: 0 8px 8px 0;
+
+        cite {
+            display: block;
+            margin-top: 16px;
+            font-style: normal;
+            font-weight: 600;
+            color: $brown;
+        }
+    }
+
+    // Alinhamentos de Imagem clássicos do TinyMCE
+    .alignleft {
+        float: left;
+        margin: 0 20px 20px 0;
+    }
+
+    .alignright {
+        float: right;
+        margin: 0 0 20px 20px;
+    }
+
+    .aligncenter {
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    // Tables
+    .wp-block-table,
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 32px 0;
+
+        td, th {
+            padding: 12px;
+            border: 1px solid $gray;
+        }
+
+        th {
+            background: $gray;
+            font-weight: 600;
+            color: $main;
+        }
+    }
+
+    // Utilities
+    .alignwide {
+        max-width: 1100px;
+        margin: 32px auto;
+    }
+
+    .alignfull {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+    }
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
