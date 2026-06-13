@@ -1,0 +1,28 @@
+name: Deploy WordPress Theme
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.1
+        with:
+          ssh-private-key: ${{ secrets.HOSTINGER_SSH_KEY }}
+
+      - name: Add Hostinger to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p 65002 147.93.38.89 >> ~/.ssh/known_hosts
+
+      - name: Deploy WP Theme files
+        run: |
+          rsync -avz --delete -e "ssh -p 65002" ./ u923856913@147.93.38.89:/home/u923856913/domains/santaclarabirigui.com/public_html/wp-content/themes/santa_clara/
