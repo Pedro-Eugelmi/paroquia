@@ -27,8 +27,10 @@
                         <h1 class="main-font single-title"><?php echo get_the_title()?></h1>
                     </div>
                     <div class="col-12 editor">
-                        <?php $content = get_the_content();
-                         echo wpautop($content); ?>
+                        <?php //$content = get_the_content();
+                         //echo wpautop($content); 
+                        the_content();
+                        ?>
                     </div>
                 </div>
             </div>
